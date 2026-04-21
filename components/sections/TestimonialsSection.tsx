@@ -1,5 +1,6 @@
-import { testimonials } from '@/lib/data'
+import { buildWhatsAppUrl, testimonials, WHATSAPP_DEFAULT_MESSAGE } from '@/lib/data'
 import TestimonialCard from '@/components/ui/TestimonialCard'
+import TrackedLink from '@/components/ui/TrackedLink'
 
 export default function TestimonialsSection() {
   return (
@@ -37,9 +38,16 @@ export default function TestimonialsSection() {
         ))}
       </ul>
       <div className="max-w-7xl mx-auto px-6 lg:px-24 text-center mt-40">
-        <a href="#contato" className="text-on-surface-variant font-light tracking-wide text-lg border-primary/20 pt-1 hover:border-primary transition-all font-bold">
+        <TrackedLink
+          href={buildWhatsAppUrl(WHATSAPP_DEFAULT_MESSAGE)}
+          target="_blank"
+          rel="noopener noreferrer"
+          eventName="whatsapp_click"
+          eventParams={{ button_location: 'testimonials' }}
+          className="text-on-surface-variant font-light tracking-wide text-lg border-primary/20 pt-1 hover:border-primary transition-all font-bold"
+        >
           Quer viver essa experiência também? Fale com a gente 💚
-        </a>
+        </TrackedLink>
       </div>
     </section>
   )

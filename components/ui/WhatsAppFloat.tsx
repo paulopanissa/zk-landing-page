@@ -1,18 +1,21 @@
 import { buildWhatsAppUrl, WHATSAPP_DEFAULT_MESSAGE } from '@/lib/data'
+import TrackedLink from '@/components/ui/TrackedLink'
 
 export default function WhatsAppFloat() {
   const url = buildWhatsAppUrl(WHATSAPP_DEFAULT_MESSAGE)
 
   return (
-    <a
+    <TrackedLink
       href={url}
       target="_blank"
       rel="noopener noreferrer"
+      eventName="whatsapp_click"
+      eventParams={{ button_location: 'float_button' }}
       aria-label="Falar pelo WhatsApp"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-[#1ebe5b] transition-all duration-200 active:scale-95"
     >
       <WhatsAppIcon />
-    </a>
+    </TrackedLink>
   )
 }
 

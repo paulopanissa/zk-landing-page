@@ -1,5 +1,6 @@
 import { buildWhatsAppUrl, heroCarouselItems, WHATSAPP_DEFAULT_MESSAGE } from '@/lib/data'
 import HeroCarousel from '@/components/sections/HeroCarousel'
+import TrackedLink from '@/components/ui/TrackedLink'
 
 export default function HeroSection() {
   const whatsappUrl = buildWhatsAppUrl(WHATSAPP_DEFAULT_MESSAGE)
@@ -31,16 +32,18 @@ export default function HeroSection() {
           </p>
 
           <div className="pt-6">
-            <a
+            <TrackedLink
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              eventName="whatsapp_click"
+              eventParams={{ button_location: 'hero' }}
               className="inline-flex items-center gap-4 bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-semibold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-primary/10"
               aria-label="Comprar via WhatsApp"
             >
               Comprar via WhatsApp
               <ArrowIcon />
-            </a>
+            </TrackedLink>
           </div>
         </div>
 

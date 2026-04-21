@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildWhatsAppUrl, LOGO_URL, WHATSAPP_DEFAULT_MESSAGE } from '@/lib/data'
+import { trackEvent } from '@/lib/analytics'
 
 const navLinks = [
   { label: 'Os mais vendidos',      href: '#colecoes' },
@@ -70,6 +71,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              onClick={() => trackEvent('social_click', { platform: 'instagram', button_location: 'header' })}
               className="text-primary hover:opacity-70 transition-all"
             >
               <InstagramIcon />
@@ -78,6 +80,7 @@ export default function Header() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('whatsapp_click', { button_location: 'header' })}
             className="bg-primary text-on-primary px-5 py-2.5 rounded-full font-label text-xs uppercase tracking-widest font-bold hover:opacity-90 transition-all active:scale-95 shadow-sm"
           >
             Comprar Agora
@@ -113,6 +116,7 @@ export default function Header() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('whatsapp_click', { button_location: 'header_mobile' })}
             className="mt-2 bg-primary text-on-primary px-6 py-4 rounded-full font-label text-xs uppercase tracking-widest font-bold text-center hover:opacity-90 transition-all"
           >
             Comprar Agora

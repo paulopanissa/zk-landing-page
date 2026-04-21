@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { buildWhatsAppUrl, CONTACT_IMAGE_URL, isSafeWhatsAppWaMeUrl } from '@/lib/data'
+import { trackEvent } from '@/lib/analytics'
 
 export default function ContactSection() {
   const [name, setName] = useState('')
@@ -17,6 +18,7 @@ export default function ContactSection() {
       : `Olá, vim pelo site e gostaria de conhecer os produtos curados por vocês!`
     const waUrl = buildWhatsAppUrl(composed)
     if (!isSafeWhatsAppWaMeUrl(waUrl)) return
+    trackEvent('whatsapp_click', { button_location: 'contact_form' })
     window.open(waUrl, '_blank', 'noopener,noreferrer')
   }
 

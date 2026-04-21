@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import type { Product } from '@/lib/data'
 import { buildWhatsAppUrl, formatPrice } from '@/lib/data'
+import TrackedLink from '@/components/ui/TrackedLink'
 
 type ProductCardProps = {
   product: Product
@@ -56,15 +57,17 @@ export default function ProductCard({ product, className = '' }: ProductCardProp
         </p>
       </div>
 
-      <a
+      <TrackedLink
         href={buildWhatsAppUrl(whatsappMessage)}
         target="_blank"
         rel="noopener noreferrer"
+        eventName="whatsapp_click"
+        eventParams={{ button_location: 'product_card', product_name: name }}
         className="w-full block bg-secondary-container text-on-secondary-container py-4 rounded-full font-label text-xs uppercase tracking-widest font-bold text-center hover:bg-secondary hover:text-on-secondary transition-colors"
         aria-label={`Pedir ${name} no WhatsApp`}
       >
         Pedir no WhatsApp
-      </a>
+      </TrackedLink>
     </article>
   )
 }

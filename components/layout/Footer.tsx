@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { buildWhatsAppUrl, LOGO_URL, WHATSAPP_DEFAULT_MESSAGE } from '@/lib/data'
+import TrackedLink from '@/components/ui/TrackedLink'
 
 // const footerLinks = [
 //   [
@@ -52,24 +53,28 @@ export default function Footer() {
 
         <div className="flex flex-col items-center md:items-end gap-8">
           <div className="flex gap-6 items-center">
-            <a
+            <TrackedLink
               href="https://www.instagram.com/lojinhazoroekaya"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              eventName="social_click"
+              eventParams={{ platform: 'instagram', button_location: 'footer' }}
               className="text-primary hover:opacity-70 transition-all"
             >
               <InstagramIcon />
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
+              eventName="whatsapp_click"
+              eventParams={{ button_location: 'footer' }}
               className="text-primary hover:opacity-70 transition-all"
             >
               <WhatsAppIcon />
-            </a>
+            </TrackedLink>
           </div>
           <span className="text-on-surface-variant text-[10px] font-bold tracking-[0.2em] uppercase text-center">
             &copy; 2026 Zoro e Kaya. Criado para pets felizes.
