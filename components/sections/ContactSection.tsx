@@ -67,7 +67,7 @@ export default function ContactSection() {
                   htmlFor="contact-phone"
                   className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant font-label ml-4 mb-2 block"
                 >
-                  WhatsApp
+                  Pode perguntar tudo! A gente ama falar sobre isso!
                 </label>
                 <input
                   id="contact-phone"
