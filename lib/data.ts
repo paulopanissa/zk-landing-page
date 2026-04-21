@@ -158,10 +158,6 @@ export function buildWhatsAppUrl(message: string = WHATSAPP_DEFAULT_MESSAGE): st
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
 
-export function buildWhatsAppUrlWithCatalog(): string {
-  return `https://wa.me/c/${WHATSAPP_NUMBER}`
-}
-
 /** Garante que só URLs oficiais wa.me deste negócio são passadas a APIs como `window.open`. */
 export function isSafeWhatsAppWaMeUrl(url: string): boolean {
   try {
