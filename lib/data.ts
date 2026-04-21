@@ -67,10 +67,10 @@ export const heroCarouselItems: HeroCarouselItem[] = [
     type: 'video',
     src: 'https://cdn.zoroekaya.com.br/IMG_0336.MOV',
     alt:
-      'Dois Border Collies felizes em campo de flores, representando o espírito da marca Zoro e Kaya',
+      'Zoro aprovando o fucinho bovino',
     poster: zoroKayaImage.src,
     thumbnail: heroZoroFocinhoBovino.src,
-    audioTooltip: 'Ouça o ASMR do Zoro',
+    audioTooltip: 'Ouça o Zoro aprovando',
   },
   // Ex.: vídeo em public/videos/nome.mp4 e opcionalmente poster em public/images/…
   // {

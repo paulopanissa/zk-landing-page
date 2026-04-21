@@ -83,7 +83,7 @@ export default function Header() {
             onClick={() => trackEvent('whatsapp_click', { button_location: 'header' })}
             className="bg-primary text-on-primary px-5 py-2.5 rounded-full font-label text-xs uppercase tracking-widest font-bold hover:opacity-90 transition-all active:scale-95 shadow-sm"
           >
-            Comprar Agora
+            Comprar pelo WhatsApp
           </a>
         </div>
 

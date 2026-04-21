@@ -23,7 +23,7 @@ export default function AboutSection() {
 
           <blockquote className="absolute -bottom-10 -right-4 lg:-right-10 bg-tertiary text-on-tertiary p-8 lg:p-10 rounded-[2.5rem] max-w-[280px] lg:max-w-xs shadow-2xl">
             <p className="font-serif italic text-lg lg:text-xl leading-relaxed">
-              &ldquo;Foi assim que tudo começou&rdquo;
+              &ldquo;Os verdadeiros responsáveis por tudo isso&rdquo;
             </p>
             <footer className="mt-4 font-label uppercase text-[10px] tracking-[0.2em] font-bold opacity-60">
               — os CEOs Zoro &amp; Kaya
@@ -41,6 +41,9 @@ export default function AboutSection() {
           >
             Inspirado por Zoro &amp; Kaya
           </h2>
+          <span className="text-secondary font-label uppercase tracking-[0.2em] text-xs font-bold">
+            Como tudo começou
+          </span>
 
 
           <div className="space-y-6 text-on-surface-variant font-light leading-relaxed text-lg">

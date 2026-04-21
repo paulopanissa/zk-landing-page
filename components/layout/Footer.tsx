@@ -31,7 +31,7 @@ export default function Footer() {
             className="h-14 w-auto grayscale"
           />
           <p className="text-on-surface-variant text-[10px] font-bold tracking-[0.2em] uppercase text-center md:text-left max-w-[240px] leading-relaxed">
-            Entrega Local em Campo Grande/MS com carinho e agilidade.
+            Entregas em Campo Grande/MS com carinho, orientação e segurança.
           </p>
         </div>
 

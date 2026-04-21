@@ -41,7 +41,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-4 bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-semibold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-primary/10"
               aria-label="Comprar via WhatsApp"
             >
-              Comprar via WhatsApp
+              Comprar pelo WhatsApp
               <ArrowIcon />
             </TrackedLink>
           </div>

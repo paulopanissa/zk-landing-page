@@ -22,6 +22,9 @@ export default function TestimonialsSection() {
         <p className="text-on-surface-variant font-light tracking-wide text-lg">
           Avaliações reais de tutores que já testaram nossa curadoria.
         </p>
+        <span className="text-on-surface-variant font-light tracking-wide text-lg">
+            Quem já testou, recomenda! 💚
+          </span>
       </div>
 
       <ul

@@ -123,16 +123,16 @@ export default function ContactSection() {
                   <LocationIcon />
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl text-primary mb-2">Atendimento Local</h3>
+                  <h3 className="font-serif text-xl text-primary mb-2">Atendimento Local em Campo Grande/MS</h3>
                   <p className="text-base text-on-surface-variant font-light leading-relaxed">
-                    Entregas diárias realizadas a partir das 16h em Campo Grande/MS.
+                    Entregas diárias a partir das 16h.
                   </p>
-                  <a
+                  {/* <a
                     href="#contato"
                     className="inline-block mt-6 text-[10px] font-bold uppercase tracking-[0.2em] text-primary border-b border-primary/30 pb-1 hover:border-primary transition-colors"
                   >
                     Pode perguntar tudo! A gente ama falar sobre isso!
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
