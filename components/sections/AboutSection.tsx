@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ABOUT_IMAGE_URL } from '@/lib/data'
+import { HERO_IMAGE_URL } from '@/lib/data'
 
 export default function AboutSection() {
   return (
@@ -12,7 +12,7 @@ export default function AboutSection() {
         <div className="order-2 lg:order-1 relative">
           <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
             <Image
-              src={ABOUT_IMAGE_URL}
+              src={HERO_IMAGE_URL}
               alt="Zoro e Kaya — os Border Collies fundadores da marca, curadores chefes de todos os produtos"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
