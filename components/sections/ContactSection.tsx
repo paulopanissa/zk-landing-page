@@ -10,8 +10,14 @@ export default function ContactSection() {
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
 
+  const canSubmit =
+    name.trim().length > 0 &&
+    phone.trim().length > 0 &&
+    message.trim().length > 0
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    if (!canSubmit) return
     const phonePart = phone ? ` Meu WhatsApp: ${phone}.` : ''
     const composed = name
       ? `Olá, me chamo ${name}.${phonePart} ${message || 'Vim pelo site e gostaria de conhecer os produtos curados por vocês!'}`
@@ -67,7 +73,7 @@ export default function ContactSection() {
                   htmlFor="contact-phone"
                   className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant font-label ml-4 mb-2 block"
                 >
-                  Pode perguntar tudo! A gente ama falar sobre isso!
+                  WhatsApp
                 </label>
                 <input
                   id="contact-phone"
@@ -91,7 +97,7 @@ export default function ContactSection() {
                 <textarea
                   id="contact-message"
                   rows={4}
-                  placeholder="Conte-nos o que você busca para seu pet..."
+                  placeholder="Pode perguntar tudo! A gente ama falar sobre isso!"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="w-full bg-surface-container-low border-b border-outline-variant/30 focus:border-primary focus:ring-0 px-6 py-5 rounded-2xl transition-all outline-none text-primary font-body resize-none placeholder:text-on-surface-variant/60"
@@ -100,7 +106,8 @@ export default function ContactSection() {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-on-primary py-6 rounded-full font-label text-sm uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-all shadow-lg active:scale-[0.98]"
+                disabled={!canSubmit}
+                className="w-full bg-primary text-on-primary py-6 rounded-full font-label text-sm uppercase tracking-[0.2em] font-bold transition-all shadow-lg disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 enabled:hover:opacity-90 enabled:active:scale-[0.98]"
               >
                 Enviar pelo WhatsApp
               </button>
@@ -125,7 +132,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-serif text-xl text-primary mb-2">Atendimento Local em Campo Grande/MS</h3>
                   <p className="text-base text-on-surface-variant font-light leading-relaxed">
-                    Entregas diárias a partir das 16h.
+                    Entregas diárias  partir das 16h.
                   </p>
                   {/* <a
                     href="#contato"
